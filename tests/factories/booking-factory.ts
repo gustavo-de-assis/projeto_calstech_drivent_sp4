@@ -5,13 +5,13 @@ export async function createHotelWithRooms(qtRooms?: number, perRoomCap?: number
     const rooms = [];
 
     if(!qtRooms){
-        qtRooms = faker.datatype.number({min:1, max: 10});
+        qtRooms = faker.datatype.number({min:1, max: 5});
     }
 
     for(let i = 0; i < qtRooms; i++) {
         rooms.push({
             name: faker.lorem.word(),
-            capacity: perRoomCap ? perRoomCap : faker.datatype.number({min:1, max: 3}),
+            capacity: (perRoomCap !== undefined)? perRoomCap : faker.datatype.number({min:1, max: 3}),
         });
     }
 
