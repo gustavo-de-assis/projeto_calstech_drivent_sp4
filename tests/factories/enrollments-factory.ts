@@ -13,7 +13,7 @@ export async function createEnrollmentWithAddress(user?: User) {
       name: faker.name.findName(),
       cpf: generateCPF(),
       birthday: faker.date.past(),
-      phone: faker.phone.phoneNumber("(##) 9####-####"),
+      phone: faker.phone.phoneNumber('(##) 9####-####'),
       userId: incomingUser.id,
       Address: {
         create: {
